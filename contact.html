@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kerala Tourism Contact Us</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    width: 100%;
+    padding: 70px 10px 50px; /* Added padding to prevent overlap */
+    background: url("images/img-5.jpg") center/cover, #000;
+  }
+
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.6em;
+    z-index: 1000;
+  }
+
+  .nav-bar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .nav-bar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 0.5em;
+  }
+
+  .nav-bar .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    max-width: 1200px; /* Adjusted to center the content */
+    margin-top: 100px; /* Space between the nav bar and content */
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    border: 2px solid black;
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 50px; /* Space between the form and footer */
+    margin-top: 100px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: black;
+  }
+
+  .input-field {
+    position: relative;
+    border-bottom: 2px solid black;
+    margin: 15px 0;
+  }
+
+  .input-field label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.15s ease;
+  }
+
+  .input-field input, .input-field textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: black;
+    padding: 10px 0;
+  }
+
+  .input-field input:focus~label,
+  .input-field input:valid~label,
+  .input-field textarea:focus~label,
+  .input-field textarea:valid~label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(-120%);
+  }
+
+  textarea {
+    height: 100px;
+    resize: none;
+    border-bottom: 2px solid black;
+  }
+
+  .wrapper a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .wrapper a:hover {
+    text-decoration: underline;
+  }
+
+  button {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+  }
+
+  button:hover {
+    color: #fff;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+  }
+
+  .back-home {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+  }
+
+  footer {
+    color: white;
+    text-align: center;
+    padding: 5px 0 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 120%;
+    margin-top: auto; /* Ensures the footer sticks to the bottom */
+  }
+
+  /* Media Queries for responsiveness */
+  @media (max-width: 480px) {
+    .wrapper {
+      width: 90%;
+      padding: 20px;
+      margin-top: 80px; /* Adjusted margin-top for smaller screens */
+    }
+
+    .nav-bar .logo {
+      font-size: 1.2em;
+    }
+
+    .nav-bar .nav-links a {
+      font-size: 0.9em;
+      padding: 0.4em 0.8em;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="nav-bar">
+    <div class="logo">Kerala Tourism</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="places.html">Places</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contacts</a>
+        <a href="login.html">Login/Signup</a>
+    </div>
+  </div>
+  <div class="content">
+    <div class="wrapper">
+      <form action="#">
+        <h2>Contact Us</h2>
+        <div class="input-field">
+          <input type="text" required aria-label="Enter your name">
+          <label>Enter your name</label>
+        </div>
+        <div class="input-field">
+          <input type="email" required aria-label="Enter your email">
+          <label>Enter your email</label>
+        </div>
+        <div class="input-field">
+          <input type="text" required aria-label="Enter your subject">
+          <label>Enter your subject</label>
+        </div>
+        <div class="input-field">
+          <textarea required aria-label="Enter your message"></textarea>
+          <label>Enter your message</label>
+        </div>
+        <button type="submit">Send Message</button>
+        <div class="back-home">
+          <p><a href="index.html">Back to Home</a></p>
+        </div>
+      </form>
+    </div>
+    <footer>
+      &copy; 2024 Kerala Tourism. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places to Visit in Kerala</title>
+    <style>
+    body {
+        background-image: url('images/img-1.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 1em;
+        z-index: 1000;
+    }
+
+    .nav-bar .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .nav-bar .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav-bar .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5em 1em;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0 0.5em;
+    }
+
+    .nav-bar .nav-links a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #fff;
+        padding: 80px 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    main {
+        padding: 20px;
+        padding-bottom: 80px;
+    }
+
+    .places {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .places h2 {
+        color: #fff;
+        font-size: 1.4em;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .place-card {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.2s;
+    }
+
+    .place-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .place-card img {
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
+    }
+
+    .place-card h3 {
+        margin: 10px;
+    }
+
+    .place-card p {
+        margin: 0 10px 10px 10px;
+    }
+
+    footer {
+        color: white;
+        text-align: center;
+        margin-top: auto;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        .nav-bar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-bar .logo {
+            margin-bottom: 0.5em;
+        }
+
+        .nav-bar .nav-links {
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        h1 {
+            padding: 100px 20px;
+        }
+
+        .places {
+            grid-template-columns: 1fr; /* Single column on smaller screens */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .nav-bar {
+            padding: 0.5em;
+        }
+
+        .nav-bar .nav-links a {
+            padding: 0.5em;
+            font-size: 0.9em;
+        }
+
+        .place-card h3 {
+            font-size: 1.1em;
+        }
+
+        .place-card p {
+            font-size: 0.9em;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="logo">Kerala Tourism</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="places.html">Places</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contacts</a>
+            <a href="login.html">Login/Signup</a>
+        </div>
+    </div>
+
+    <h1>Explore Kerala</h1>
+    <main>
+        <section class="places">
+            <h2>Top Places to Visit in Thiruvananthapuram</h2>
+            <div class="place-card">
+                <img src="images/img-16.jpeg" alt="Padmanabhaswamy Temple">
+                <h3>Padmanabhaswamy Temple</h3>
+                <p>A historic temple known for its intricate architecture and spiritual significance.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-17.jpg" alt="Kovalam Beach">
+                <h3>Kovalam Beach</h3>
+                <p>Famous for its crescent-shaped coastline, lighthouse, and vibrant beach activities.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-19.jpg" alt="Ponmudi Hills">
+                <h3>Ponmudi Hills</h3>
+                <p>A serene hill station offering scenic views, trekking trails, and lush greenery.</p>
+            </div>
+            <!-- Add more places as needed -->
+        </section><br>
+        
+        <section class="places">
+            <h2>Top Places to Visit in Kollam</h2>
+            <div class="place-card">
+                <img src="images/img-20.jpeg" alt="Ashtamudi Lake">
+                <h3>Ashtamudi Lake</h3>
+                <p>Known for its picturesque backwaters, houseboat cruises, and serene ambiance.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-21.jpeg" alt="Jatayu Earth's Center">
+                <h3>Jatayu Earth's Center</h3>
+                <p>A unique rock theme park with the world's largest bird sculpture and adventure activities.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-22.jpg" alt="Palaruvi Waterfalls">
+                <h3>Palaruvi Waterfalls</h3>
+                <p>A stunning waterfall nestled in the forest, ideal for picnics and nature walks.</p>
+            </div>
+            <!-- Add more places as needed -->
+        </section><br>
+        
+        <section class="places">
+            <h2>Top Places to Visit in Pathanamthitta</h2>
+            <div class="place-card">
+                <img src="images/img-23.jpg" alt="Sabarimala Temple">
+                <h3>Sabarimala Temple</h3>
+                <p>A major pilgrimage center dedicated to Lord Ayyappa, attracting millions of devotees.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-24.jpg" alt="Gavi">
+                <h3>Gavi</h3>
+                <p>A beautiful eco-tourism spot offering wildlife, trekking, and boating experiences.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-25.jpg" alt="Konni Elephant Training Center">
+                <h3>Konni Elephant Training Center</h3>
+                <p>A historic elephant training center where visitors can interact with elephants.</p>
+            </div>
+            <!-- Add more places as needed -->
+        </section><br>
+        
+        <section class="places">
+            <h2>Top Places to Visit in Alappuzha (Alleppey)</h2>
+            <div class="place-card">
+                <img src="images/img-26.jpeg" alt="Alleppey Backwaters">
+                <h3>Alleppey Backwaters</h3>
+                <p>Renowned for houseboat cruises through the scenic backwaters and paddy fields.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-27.jpeg" alt="Marari Beach">
+                <h3>Marari Beach</h3>
+                <p>A tranquil beach known for its clean sands and peaceful ambiance.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-28.jpg" alt="Krishnapuram Palace">
+                <h3>Krishnapuram Palace</h3>
+                <p>A historic palace featuring Kerala-style architecture and ancient murals.</p>
+            </div>
+            <!-- Add more places as needed -->
+        </section><br>
+        
+        <section class="places">
+            <h2>Top Places to Visit in Kottayam</h2>
+            <div class="place-card">
+                <img src="images/img-29.jpeg" alt="Kumarakom Backwaters">
+                <h3>Kumarakom Backwaters</h3>
+                <p>Famous for bird watching, houseboat cruises, and lush landscapes.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-30.jpg" alt="Vaikom Mahadeva Temple">
+                <h3>Vaikom Mahadeva Temple</h3>
+                <p>One of the oldest temples in Kerala, dedicated to Lord Shiva.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-12.jpg" alt="Illikkal Kallu">
+                <h3>Illikkal Kallu</h3>
+                <p>A popular trekking destination with stunning rock formations and panoramic views.</p>
+            </div>
+        </section><br>
+        
+        <section class="places">
+            <h2>Top Places to Visit in Idukki</h2>
+            <div class="place-card">
+                <img src="images/img-9.jpeg" alt="Munnar">
+                <h3>Munnar</h3>
+                <p>Known for its tea plantations, cool climate, and picturesque landscapes.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-31.jpeg" alt="Thekkady">
+                <h3>Thekkady</h3>
+                <p>Home to Periyar Wildlife Sanctuary, famous for its elephants and boat rides.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-32.jpeg" alt="Idukki Dam">
+                <h3>Idukki Dam</h3>
+                <p>One of the highest arch dams in Asia, offering breathtaking views and boating.</p>
+            </div>
+        </section><br>
+        
+        <section class="places">
+            <h2>Top Places to Visit in Ernakulam (Kochi)</h2>
+            <div class="place-card">
+                <img src="images/img-33.jpg" alt="Fort Kochi">
+                <h3>Fort Kochi</h3>
+                <p>Known for its colonial architecture, Chinese fishing nets, and vibrant arts scene.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-34.jpg" alt="Marine Drive">
+                <h3>Marine Drive</h3>
+                <p>A scenic waterfront promenade with beautiful views of the backwaters and the sunset.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-35.jpg" alt="Mattancherry Palace">
+                <h3>Mattancherry Palace</h3>
+                <p>Also known as the Dutch Palace, showcasing Kerala murals and artifacts.</p>
+            </div>
+        </section><br>
+        
+        <section class="places">
+            <h2>Top Places to Visit in Thrissur</h2>
+            <div class="place-card">
+                <img src="images/img-36.jpg" alt="Athirappilly Waterfalls">
+                <h3>Athirappilly Waterfalls</h3>
+                <p>Often called the "Niagara of India," famous for its breathtaking cascades.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-37.jpg" alt="Vadakkunnathan Temple">
+                <h3>Vadakkunnathan Temple</h3>
+                <p>An ancient temple dedicated to Lord Shiva, known for its cultural significance.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-38.jpg" alt="Thrissur Pooram">
+                <h3>Thrissur Pooram</h3>
+                <p>A grand festival featuring elaborate elephant processions and traditional music.</p>
+            </div>
+        </section><br>
+        
+        <section class="places">
+            <h2>Top Places to Visit in Palakkad</h2>
+            <div class="place-card">
+                <img src="images/img-39.jpg" alt="Silent Valley National Park">
+                <h3>Silent Valley National Park</h3>
+                <p>A pristine rainforest reserve with rich biodiversity and scenic beauty.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-40.jpg" alt="Palakkad Fort">
+                <h3>Palakkad Fort</h3>
+                <p>A historic fort with well-preserved architecture and a beautiful garden.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-41.jpeg" alt="Malampuzha Dam and Gardens">
+                <h3>Malampuzha Dam and Gardens</h3>
+                <p>A popular spot for picnics, boating, and enjoying the scenic landscape.</p>
+            </div>
+        </section><br>
+        
+        <section class="places">
+            <h2>Top Places to Visit in Malappuram</h2>
+            <div class="place-card">
+                <img src="images/img-42.jpg" alt="Kottakkunnu">
+                <h3>Kottakkunnu</h3>
+                <p>Known as the 'Ooty of Malabar,' offering hilltop views, gardens, and an amphitheater.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-43.jpeg" alt="Nilambur Teak Museum">
+                <h3>Nilambur Teak Museum</h3>
+                <p>The world's first teak museum, showcasing the history and beauty of teak wood.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-44.jpg" alt="Thirunavaya Temple">
+                <h3>Thirunavaya Temple</h3>
+                <p>An ancient temple by the Bharathapuzha River, significant for Hindu rituals.</p>
+            </div>
+        </section><br>
+        
+        <section class="places">
+            <h2>Top Places to Visit in Kozhikode (Calicut)</h2>
+            <div class="place-card">
+                <img src="images/img-45.jpeg" alt="Kappad Beach">
+                <h3>Kappad Beach</h3>
+                <p>The historic beach where Vasco da Gama landed in 1498.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-46.jpg" alt="Beypore">
+                <h3>Beypore</h3>
+                <p>Renowned for its shipbuilding yard and scenic views of the Chaliyar River.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-47.jpeg" alt="Mananchira Square">
+                <h3>Mananchira Square</h3>
+                <p>A popular park with a musical fountain, surrounded by historical landmarks.</p>
+            </div>
+        </section><br>
+        
+        <section class="places">
+            <h2>Top Places to Visit in Wayanad</h2>
+            <div class="place-card">
+                <img src="images/img-48.jpg" alt="Edakkal Caves">
+                <h3>Edakkal Caves</h3>
+                <p>Ancient caves with prehistoric carvings, offering a glimpse into early human life.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-49.jpg" alt="Chembra Peak">
+                <h3>Chembra Peak</h3>
+                <p>The highest peak in Wayanad, known for its heart-shaped lake and trekking trails.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-50.jpg" alt="Wayanad Wildlife Sanctuary">
+                <h3>Wayanad Wildlife Sanctuary</h3>
+                <p>A sanctuary rich in wildlife, including elephants, tigers, and exotic birds.</p>
+            </div>
+        </section><br>
+        
+        <section class="places">
+            <h2>Top Places to Visit in Kannur</h2>
+            <div class="place-card">
+                <img src="images/img-51.jpeg" alt="Muzhappilangad Drive-in Beach">
+                <h3>Muzhappilangad Drive-in Beach</h3>
+                <p>India's only drive-in beach, known for its long stretch of sandy shores.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-52.jpg" alt="St. Angelo Fort">
+                <h3>St. Angelo Fort</h3>
+                <p>A historic fort offering panoramic views of the Arabian Sea.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-53.jpeg" alt="Payyambalam Beach">
+                <h3>Payyambalam Beach</h3>
+                <p>A popular beach with beautiful sands, gardens, and a relaxed vibe.</p>
+            </div>
+        </section><br>
+        
+        <section class="places">
+            <h2>Top Places to Visit in Kasaragod</h2>
+            <div class="place-card">
+                <img src="images/img-54.jpeg" alt="Bekal Fort">
+                <h3>Bekal Fort</h3>
+                <p>A massive fort by the sea, known for its scenic views and historical significance.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-55.jpeg" alt="Chandragiri Fort">
+                <h3>Chandragiri Fort</h3>
+                <p>An ancient fort overlooking the confluence of the Chandragiri River and the Arabian Sea.</p>
+            </div>
+            <div class="place-card">
+                <img src="images/img-56.jpg" alt="Ananthapura Lake Temple">
+                <h3>Ananthapura Lake Temple</h3>
+                <p>A unique temple situated in the middle of a lake, known for its serene setting.</p>
+            </div>
+        </section><br>        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kerala Tourism. All rights reserved.</p>
+    </footer>
+</body>
+</html>

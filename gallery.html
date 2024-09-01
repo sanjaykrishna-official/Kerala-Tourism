@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Kerala Tourism</title>
+    <style>
+        /* Basic Reset */
+        body {
+            background-image: url("images/img-1.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            min-height: 100vh; /* Ensures the body stretches at least to the full viewport height */
+        }
+
+        /* Navigation */
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.7em;
+            z-index: 1000;
+        }
+        .nav-bar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+        }
+        .nav-bar .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            font-size: 1em;
+            font-weight: bold;
+            margin: 0 0.5em;
+        }
+        .nav-bar .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 100px 20px 80px; /* Add padding to top and bottom to avoid overlap with nav and footer */
+            text-align: center;
+        }
+
+        .gallery h1 {
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+            box-sizing: border-box;
+            font-weight: bold;
+            font-size: 60px;
+            padding: 0 0 20px;
+            margin: 0;
+        }
+
+        .gallery p {
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+            padding-bottom: 60px;
+            margin: 0 40px;
+            font-weight: bold;
+            font-size: 18px;
+            text-align: justify; /* Justify the text */
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;  /* Positioning context for the overlay */
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%; 
+            transition: transform 0.3s ease;
+            display: block; /* Removes the bottom gap */
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .overlay {
+            position: absolute;  /* Position overlay on top of the image */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);  /* Semi-transparent background */
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+            margin-top: auto; /* Ensures the footer sticks to the bottom */
+        }
+        /* Responsive Media Queries */
+        @media (max-width: 1024px) {
+            .gallery h1 {
+                font-size: 50px;
+            }
+            .gallery p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-bar .nav-links a {
+                padding: 0.5em;
+                margin: 0 0.3em;
+                font-size: 0.9em;
+            }
+            .gallery h1 {
+                font-size: 40px;
+            }
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-bar {
+                flex-direction: column;
+                padding: 0.5em;
+            }
+            .nav-bar .logo {
+                margin-bottom: 10px;
+            }
+            .nav-bar .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .gallery h1 {
+                font-size: 30px;
+            }
+            .gallery p {
+                font-size: 14px;
+                margin: 0 20px;
+            }
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Section -->
+    <div class="nav-bar">
+        <div class="logo">Kerala Tourism</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="places.html">Places</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contacts</a>
+            <a href="login.html">Login/Signup</a>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h1>Gallery</h1>
+        <p>Our photo gallery showcases photographs that capture the spirit and splendour of God's Own Country. Each image reflects the unique aspects, like backwaters, beaches, hills, museums, performing arts, festivals, picnic spots, pilgrim centers, waterfalls, wildlife etc. that makes Kerala a dream destination for traveller. </p>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/img-9.jpeg" alt="Description 1">
+                <div class="overlay">
+                    <div class="text">Munnar</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-10.jpg" alt="Description 2">
+                <div class="overlay">
+                    <div class="text">Madhur Temple</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-11.jpg" alt="Description 3">
+                <div class="overlay">
+                    <div class="text">Kollengode Palace</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-12.jpg" alt="Description 3">
+                <div class="overlay">
+                    <div class="text">Illikkal Kallu</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-13.jpg" alt="Description 3">
+                <div class="overlay">
+                    <div class="text">Theyyam</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-14.jpg" alt="Description 3">
+                <div class="overlay">
+                    <div class="text">Punalur Hanging Bridge</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-15.jpg" alt="Description 3">
+                <div class="overlay">
+                    <div class="text">Alleppey Beach</div>
+                </div>
+            </div>
+            <!-- Thiruvananthapuram -->
+            <div class="gallery-item">
+                <img src="images/img-16.jpeg" alt="Padmanabhaswamy Temple">
+                <div class="overlay">
+                    <div class="text">Padmanabhaswamy Temple</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-17.jpg" alt="Kovalam Beach">
+                <div class="overlay">
+                    <div class="text">Kovalam Beach</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-19.jpg" alt="Ponmudi Hills">
+                <div class="overlay">
+                    <div class="text">Ponmudi Hills</div>
+                </div>
+            </div>
+
+            <!-- Kollam -->
+            <div class="gallery-item">
+                <img src="images/img-20.jpeg" alt="Ashtamudi Lake">
+                <div class="overlay">
+                    <div class="text">Ashtamudi Lake</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-21.jpeg" alt="Jatayu Earth's Center">
+                <div class="overlay">
+                    <div class="text">Jatayu Earth's Center</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-22.jpg" alt="Palaruvi Waterfalls">
+                <div class="overlay">
+                    <div class="text">Palaruvi Waterfalls</div>
+                </div>
+            </div>
+
+            <!-- Pathanamthitta -->
+            <div class="gallery-item">
+                <img src="images/img-23.jpg" alt="Sabarimala Temple">
+                <div class="overlay">
+                    <div class="text">Sabarimala Temple</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-24.jpg" alt="Gavi">
+                <div class="overlay">
+                    <div class="text">Gavi</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-25.jpg" alt="Konni Elephant Training Center">
+                <div class="overlay">
+                    <div class="text">Konni Elephant Training Center</div>
+                </div>
+            </div>
+
+            <!-- Alappuzha (Alleppey) -->
+            <div class="gallery-item">
+                <img src="images/img-26.jpeg" alt="Alleppey Backwaters">
+                <div class="overlay">
+                    <div class="text">Alleppey Backwaters</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-27.jpeg" alt="Marari Beach">
+                <div class="overlay">
+                    <div class="text">Marari Beach</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-28.jpg" alt="Krishnapuram Palace">
+                <div class="overlay">
+                    <div class="text">Krishnapuram Palace</div>
+                </div>
+            </div>
+
+            <!-- Ernakulam -->
+            <div class="gallery-item">
+                <img src="images/img-33.jpg" alt="Fort Kochi">
+                <div class="overlay">
+                    <div class="text">Fort Kochi</div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/img-35.jpg" alt="Mattancherry Palace">
+                <div class="overlay">
+                    <div class="text">Mattancherry Palace</div>
+                </div>
+            </div>
+
+            <!-- Idukki -->
+
+            <div class="gallery-item">
+                <img src="images/img-31.jpeg" alt="Thekkady">
+                <div class="overlay">
+                    <div class="text">Thekkady</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-32.jpeg" alt="Idukki Dam">
+                <div class="overlay">
+                    <div class="text">Idukki Dam</div>
+                </div>
+            </div>
+
+            <!-- Kannur -->
+            <div class="gallery-item">
+                <img src="images/img-52.jpg" alt="St. Angelo Fort">
+                <div class="overlay">
+                    <div class="text">St. Angelo Fort</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-53.jpeg" alt="Payyambalam Beach">
+                <div class="overlay">
+                    <div class="text">Payyambalam Beach</div>
+                </div>
+            </div>
+
+            <!-- Kasaragod -->
+            <div class="gallery-item">
+                <img src="images/img-54.jpeg" alt="Bekal Fort">
+                <div class="overlay">
+                    <div class="text">Bekal Fort</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-55.jpeg" alt="Chandragiri Fort">
+                <div class="overlay">
+                    <div class="text">Chandragiri Fort</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-56.jpg" alt="Ananthapura Lake Temple">
+                <div class="overlay">
+                    <div class="text">Ananthapura Lake Temple</div>
+                </div>
+            </div>
+
+            <!-- Kottayam -->
+
+            <!-- Kozhikode -->
+
+            <div class="gallery-item">
+                <img src="images/img-45.jpeg" alt="Kappad Beach">
+                <div class="overlay">
+                    <div class="text">Kappad Beach</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-47.jpeg" alt="Mananchira Square">
+                <div class="overlay">
+                    <div class="text">Mananchira Square</div>
+                </div>
+            </div>
+
+            <!-- Malappuram -->
+            <div class="gallery-item">
+                <img src="images/img-42.jpg" alt="Kottakkunnu">
+                <div class="overlay">
+                    <div class="text">Kottakkunnu</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-43.jpeg" alt="Nilambur Teak Museum">
+                <div class="overlay">
+                    <div class="text">Nilambur Teak Museum</div>
+                </div>
+            </div>
+
+            <!-- Palakkad -->
+            <div class="gallery-item">
+                <img src="images/img-40.jpg" alt="Palakkad Fort">
+                <div class="overlay">
+                    <div class="text">Palakkad Fort</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-39.jpg" alt="Silent Valley National Park">
+                <div class="overlay">
+                    <div class="text">Silent Valley National Park</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-41.jpeg" alt="Malampuzha Dam">
+                <div class="overlay">
+                    <div class="text">Malampuzha Dam</div>
+                </div>
+            </div>
+
+            <!-- Thrissur -->
+
+            <div class="gallery-item">
+                <img src="images/img-36.jpg" alt="Athirappilly Waterfalls">
+                <div class="overlay">
+                    <div class="text">Athirappilly Waterfalls</div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/img-37.jpg" alt="Vadakkunnathan Temple">
+                <div class="overlay">
+                    <div class="text">Vadakkunnathan Temple</div>
+                </div>
+            </div>
+
+            <!-- Wayanad -->
+            <div class="gallery-item">
+                <img src="images/img-48.jpg" alt="Edakkal Caves">
+                <div class="overlay">
+                    <div class="text">Edakkal Caves</div>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/img-49.jpg" alt="Chembra Peak">
+                <div class="overlay">
+                    <div class="text">Chembra Peak</div>
+                </div>
+            </div>
+
+            <!-- Add more items as needed -->
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Kerala Tourism. All rights reserved.</p>
+    </footer>
+</body>
+</html>
