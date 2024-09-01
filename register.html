@@ -21,11 +21,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100%;
+      height: 100vh;
       width: 100%;
       padding: 70px 10px 50px; /* Padding for space above and below content */
-      background: url("images/img-5.jpg") center/cover, #000;
-      background-repeat: no-repeat;
+      background: url("images/img-5.jpg") no-repeat center center fixed;
+      background-size: cover;
     }
 
     .nav-bar {
@@ -167,10 +167,12 @@
     footer {
       color: white;
       text-align: center;
-      padding: 5px 0;
+      padding: 0;
       background: rgba(0, 0, 0, 0.7);
       width: 120%;
       margin-top: auto; /* Ensures the footer sticks to the bottom */
+      bottom: 0;
+      margin-bottom: 0;
     }
 
     /* Media Queries for responsiveness */
