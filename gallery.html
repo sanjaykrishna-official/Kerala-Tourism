@@ -131,55 +131,51 @@
             text-align: center;
             margin-top: auto; /* Ensures the footer sticks to the bottom */
         }
-        /* Responsive Media Queries */
-        @media (max-width: 1024px) {
-            .gallery h1 {
-                font-size: 50px;
-            }
-            .gallery p {
-                font-size: 16px;
-            }
-        }
-
+        /* Media Queries for Responsive Design */
         @media (max-width: 768px) {
-            .nav-bar .nav-links a {
-                padding: 0.5em;
-                margin: 0 0.3em;
-                font-size: 0.9em;
-            }
             .gallery h1 {
-                font-size: 40px;
+                font-size: 2rem;
             }
-            .gallery-container {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+            .gallery p {
+                font-size: 0.9rem;
+                margin: 0 20px;
+            }
+
+            .nav-bar {
+            flex-direction: column;
+            padding: 0.5em;
+            }
+
+            .nav-bar .nav-links {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                align-items: center;
+            }
+            
+            .nav-bar .nav-links a {
+                padding: 0.5em 0;
+                width: 100%;
+                text-align: center;
+                font-size: 0.9em;
             }
         }
 
         @media (max-width: 480px) {
-            .nav-bar {
-                flex-direction: column;
-                padding: 0.5em;
-            }
-            .nav-bar .logo {
-                margin-bottom: 10px;
-            }
-            .nav-bar .nav-links {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
             .gallery h1 {
-                font-size: 30px;
+                font-size: 1.5rem;
             }
+
             .gallery p {
-                font-size: 14px;
-                margin: 0 20px;
+                font-size: 0.8rem;
+                margin: 0 15px;
             }
+
             .gallery-container {
                 grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             }
         }
-
     </style>
 </head>
 <body>

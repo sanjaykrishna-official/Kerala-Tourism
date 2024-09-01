@@ -25,6 +25,7 @@
     width: 100%;
     padding: 70px 10px 50px; /* Added padding to prevent overlap */
     background: url("images/img-5.jpg") center/cover, #000;
+    background-repeat: no-repeat;
   }
 
   .nav-bar {
@@ -49,10 +50,10 @@
   .nav-bar .nav-links a {
     color: #fff;
     text-decoration: none;
-    padding: 0.5em 1em;
+    padding: 0.5em;
     font-size: 1em;
     font-weight: bold;
-    margin: 0 0.5em;
+    margin: 0 0.2em;
   }
 
   .nav-bar .nav-links a:hover {
@@ -175,18 +176,61 @@
   footer {
     color: white;
     text-align: center;
-    padding: 5px 0 0;
+    padding: 0;
     background: rgba(0, 0, 0, 0.7);
     width: 120%;
     margin-top: auto; /* Ensures the footer sticks to the bottom */
   }
 
-  /* Media Queries for responsiveness */
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
+    .nav-bar {
+      flex-direction: column;
+      padding: 0.5em;
+      }
+
+    .nav-bar .nav-links {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .nav-bar .nav-links a {
+        padding: 0.5em 0;
+        width: 100%;
+        text-align: center;
+        font-size: 0.9em;
+    }
+
+    .content {
+      margin-top: 80px;
+      padding: 0 10px;
+    }
+
     .wrapper {
-      width: 90%;
+      margin-top: 50px;
       padding: 20px;
-      margin-top: 80px; /* Adjusted margin-top for smaller screens */
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .input-field label,
+    .input-field input,
+    .input-field textarea {
+      font-size: 14px;
+    }
+
+    button {
+      padding: 10px 16px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav-bar {
+      padding: 0.8em;
     }
 
     .nav-bar .logo {
@@ -194,10 +238,35 @@
     }
 
     .nav-bar .nav-links a {
-      font-size: 0.9em;
-      padding: 0.4em 0.8em;
+      font-size: 0.8em;
+      padding: 0.3em 0.6em;
+    }
+
+    .wrapper {
+      padding: 15px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+    }
+
+    .input-field label,
+    .input-field input,
+    .input-field textarea {
+      font-size: 12px;
+    }
+
+    button {
+      padding: 8px 14px;
+      font-size: 12px;
+    }
+
+    footer {
+      font-size: 12px;
     }
   }
+
+  
 </style>
 </head>
 <body>

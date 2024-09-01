@@ -37,11 +37,6 @@
         color: #fff;
     }
 
-    .nav-bar .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
     .nav-bar .nav-links a {
         color: #fff;
         text-decoration: none;
@@ -111,40 +106,37 @@
         text-align: center;
         margin-top: auto;
     }
-
-    /* Media Queries for Responsiveness */
-    @media (max-width: 768px) {
+    /* Mobile Responsiveness */
+    @media screen and (max-width: 768px) {
         .nav-bar {
             flex-direction: column;
-            align-items: flex-start;
+            padding: 0.5em;
         }
-
-        .nav-bar .logo {
-            margin-bottom: 0.5em;
-        }
-
         .nav-bar .nav-links {
+            display: flex;
+            flex-direction: row;
             width: 100%;
-            justify-content: space-around;
+            align-items: center;
+        }
+        .nav-bar .nav-links a {
+            padding: 0.5em 0;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9em;
         }
 
         h1 {
-            padding: 100px 20px;
+            padding: 100px 20px 20px 20px;
+            font-size: 1.5em;
         }
 
-        .places {
-            grid-template-columns: 1fr; /* Single column on smaller screens */
-        }
-    }
-
-    @media (max-width: 480px) {
-        .nav-bar {
-            padding: 0.5em;
+        .places h2 {
+            font-size: 1.2em;
+            margin-top: 20px;
         }
 
-        .nav-bar .nav-links a {
-            padding: 0.5em;
-            font-size: 0.9em;
+        .place-card img {
+            height: auto;
         }
 
         .place-card h3 {
@@ -154,7 +146,31 @@
         .place-card p {
             font-size: 0.9em;
         }
+
+        main {
+            padding: 10px;
+        }
     }
+
+    @media screen and (max-width: 480px) {
+        h1 {
+            font-size: 1.2em;
+            padding: 80px 10px 10px 10px;
+        }
+
+        .places h2 {
+            font-size: 1em;
+        }
+
+        .place-card h3 {
+            font-size: 1em;
+        }
+
+        .place-card p {
+            font-size: 0.8em;
+        }
+    }
+
 </style>
 </head>
 <body>

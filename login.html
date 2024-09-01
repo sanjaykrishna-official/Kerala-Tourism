@@ -21,10 +21,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      min-height: 100%;
       width: 100%;
       padding: 70px 10px 50px; /* Padding for space above and below content */
       background: url("images/img-5.jpg") center/cover, #000;
+      background-repeat: no-repeat;
     }
 
     .nav-bar {
@@ -52,7 +53,7 @@
       padding: 0.5em;
       font-size: 1em;
       font-weight: bold;
-      margin: 0 0.5em;
+      margin: 0 0.2em;
     }
 
     .nav-bar .nav-links a:hover {
@@ -187,27 +188,104 @@
     footer {
       color: white;
       text-align: center;
-      padding: 5px 0;
+      padding: 0;
       background: rgba(0, 0, 0, 0.7);
       width: 120%;
       margin-top: auto; /* Ensures the footer sticks to the bottom */
     }
 
-    /* Media Queries for responsiveness */
-    @media (max-width: 480px) {
-      .wrapper {
-        width: 90%;
-        padding: 20px;
-        margin-top: 80px; /* Adjusted margin-top for smaller screens */
+    @media (max-width: 768px) {
+      .nav-bar {
+        flex-direction: column;
+        padding: 0.5em;
       }
 
-      .nav-bar .logo {
-        font-size: 1.2em;
+      .nav-bar .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
       }
-
+      
       .nav-bar .nav-links a {
+        padding: 0.5em 0.2em;
+        width: 100%;
+        text-align: center;
         font-size: 0.9em;
-        padding: 0.4em 0.8em;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .input-field label {
+        font-size: 14px;
+      }
+
+      .input-field input {
+        font-size: 14px;
+        height: 35px;
+      }
+
+      button {
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+
+      .forget label p {
+        font-size: 14px;
+      }
+
+      .register p {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-bar {
+        flex-direction: column;
+        padding: 0.5em;
+      }
+
+      .nav-bar .nav-links {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+      }
+      
+      .nav-bar .nav-links a {
+        padding: 0.5em 5px;
+        width: 100%;
+        text-align: center;
+        font-size: 0.9em;
+      }
+
+      .wrapper {
+        padding: 20px;
+        margin: 20px 0 120px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .input-field input {
+        height: 30px;
+        font-size: 13px;
+      }
+
+      .input-field label {
+        font-size: 13px;
+      }
+
+      button {
+        padding: 8px 12px;
+        font-size: 13px;
+      }
+
+      .forget label p, .register p {
+        font-size: 13px;
       }
     }
   </style>

@@ -257,59 +257,30 @@
             padding: 0;
             position: relative;
         }
-        /* Responsive Design */
-        @media screen and (max-width: 1200px) {
-            .content .text, .content .slideshow {
-                width: 100%;
-                padding: 0;
-            }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
             .content {
                 flex-direction: column;
+                text-align: center;
                 padding: 1em;
+                margin-top: 70px; /* Reduce top margin */
             }
-        }
-
-        @media screen and (max-width: 768px) {
-            .nav-bar .nav-links a {
-                font-size: 0.9em;
-                padding: 0.5em;
+            .content .text {
+                width: 100%;
+                padding-right: 0;
+                font-size: 1.2em;
             }
-            .explore-btn, .explore-btn1 {
-                width: auto;
-                font-size: 0.9em;
+            .content .text p {
+                font-size: 0.8em;
+                padding-top: 15px;
             }
-            .section1 p, .section2 p {
-                font-size: 1.1em;
-            }
-            .festivals iframe {
+            .content .slideshow {
                 width: 100%;
                 height: 200px;
             }
-        }
-
-        @media screen and (max-width: 480px) {
-            .nav-bar {
-                flex-direction: column;
-                padding: 0.5em;
-            }
-            .nav-bar .logo {
-                font-size: 1.2em;
-            }
-            .nav-bar .nav-links {
-                display: flex;
-                flex-direction: column;
-            }
-            .nav-bar .nav-links a {
-                padding: 0.5em 0;
-                margin: 0.2em 0;
-                text-align: center;
-            }
-            .content .text h1 {
-                font-size: 1.5em;
-            }
-            .explore-btn, .explore-btn1 {
-                font-size: 0.8em;
-                width: 120px;
+            .section1, .section2 {
+                padding: 1em;
             }
             .section1 h2, .section2 h2 {
                 font-size: 1.5em;
@@ -317,13 +288,38 @@
             .section1 p, .section2 p {
                 font-size: 1em;
             }
-            .things-to-do .activity {
-                width: 150px;
-                height: 150px;
+            .nav-bar {
+                flex-direction: column;
+                padding: 0.5em;
+            }
+            .nav-bar .nav-links {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                align-items: center;
+            }
+            .nav-bar .nav-links a {
+                padding: 0.5em 0;
+                width: 100%;
+                text-align: center;
+                font-size: 0.9em;
+            }
+            .explore-btn, .explore-btn1 {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .things-to-do {
+                flex-direction: column;
+                gap: 10px;
             }
             .festivals iframe {
                 width: 100%;
-                height: 150px;
+            }
+            .background{
+                height: 120vh;
+            }
+            .background1{
+                height: 300vh;
             }
         }
     </style>

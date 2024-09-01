@@ -21,10 +21,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      height: 100%;
       width: 100%;
       padding: 70px 10px 50px; /* Padding for space above and below content */
       background: url("images/img-5.jpg") center/cover, #000;
+      background-repeat: no-repeat;
     }
 
     .nav-bar {
@@ -49,7 +50,7 @@
     .nav-bar .nav-links a {
       color: #fff;
       text-decoration: none;
-      padding: 0.5em;
+      padding: 0.5em 0.3em;
       font-size: 1em;
       font-weight: bold;
       margin: 0 0.5em;
@@ -180,13 +181,23 @@
         margin-top: 80px; /* Adjusted margin-top for smaller screens */
       }
 
-      .nav-bar .logo {
-        font-size: 1.2em;
+      .nav-bar {
+        flex-direction: column;
+        padding: 0.5em;
       }
 
+      .nav-bar .nav-links {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+      }
+      
       .nav-bar .nav-links a {
+        padding: 0.5em 0;
+        width: 100%;
+        text-align: center;
         font-size: 0.9em;
-        padding: 0.4em 0.8em;
       }
     }
   </style>
